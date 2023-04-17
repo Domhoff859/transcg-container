@@ -1,4 +1,4 @@
-PIL
+Pillow
 tqdm
 h5py
 numpy
@@ -8,5 +8,6 @@ einops
 PyYaml
 OpenEXR
 argparse
-opencv-python
-opencv-contrib-python
+open3d
+opencv-python-headless
+opencv-contrib-python-headless
