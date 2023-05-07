@@ -18,6 +18,3 @@ RUN pip install -r requirements.txt
 COPY ./src /workspace/src
 
 WORKDIR /workspace/src/TransCG/
-
-ENTRYPOINT ["python"]
-CMD ["/workspace/src/TransCG/sample_inference.py"] 
