@@ -1,5 +1,3 @@
-Certainly! Here's a more stylized version of the Readme for the transcg-container repository:
-
 # TransCG Container
 
 Welcome to the TransCG Container repository! This repository contains a Docker container for the TransCG tool, a program for creating transliterated corpora from parallel text developed by the University of Arizona's Computational Linguistics and Language Acquisition Lab.
