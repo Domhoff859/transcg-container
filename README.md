@@ -1,35 +1,57 @@
-# TransCG Container
+# transcg-container
 
-Welcome to the TransCG Container repository! This repository contains a Docker container for the TransCG tool, a program for creating transliterated corpora from parallel text developed by the University of Arizona's Computational Linguistics and Language Acquisition Lab.
+Welcome to the `transcg-container` repository! This repository contains code for a containerized version of the `TransCG` application. `TransCG` is a tool that performs picture depth completion using advanced computer vision techniques.
 
-## Getting Started
+## Table of Contents
+- [Overview](#overview)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-To use this container, you'll need to have Docker installed on your system. If you don't have Docker installed, you can download it from the [Docker website](https://www.docker.com/get-started).
+## Overview
+The `transcg-container` repository provides a convenient way to run the `TransCG` application within a Docker container. Docker allows you to package the necessary dependencies and configurations, making it easier to deploy and run the application on different systems without worrying about compatibility issues.
 
-Once you have Docker installed, you can build the container using the following command:
+## Dependencies
+To run the `transcg-container` application, you need to have the following dependencies installed on your system:
+- Docker: The containerization platform used for running the application. You can download and install Docker from the official website: [https://www.docker.com](https://www.docker.com)
 
-```bash
-docker build -t transcg-container .
+## Installation
+To get started with `transcg-container`, follow these steps:
+
+1. Clone this repository to your local machine:
+   ```
+   git clone https://github.com/Domhoff859/transcg-container.git
+   ```
+
+2. Change into the cloned directory:
+   ```
+   cd transcg-container
+   ```
+
+3. Build the Docker image using the provided Dockerfile:
+   ```
+   docker build -t transcg-container .
+   ```
+
+## Usage
+Once you have built the Docker image, you can use it to perform picture depth completion with `TransCG` using the following command:
+
+```
+docker run -it transcg-container
 ```
 
-This command will build the container using the Dockerfile in this repository and tag it with the name `transcg-container`.
+The above command runs the `TransCG` application inside a Docker container in interactive mode. This allows you to provide the necessary inputs and interact with the application.
 
-## Running the Container
+Please note that the specific usage instructions for the `TransCG` application within the container may vary. Make sure to consult the documentation or README of the `TransCG` application for detailed usage instructions.
 
-After building the container, you can run it using the following command:
+## Contributing
+Contributions to `transcg-container` are welcome! If you have any suggestions, bug reports, or would like to add new features, please feel free to submit a pull request.
 
-```bash
-docker run -it --rm transcg-container
-```
+## License
+This repository is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the code in this repository for personal or commercial purposes.
 
-This command will start the container in interactive mode (`-it`) and remove the container when it's done running (`--rm`). Once the container is running, you can use TransCG by following the instructions in the TransCG documentation, which is available in the container at `/usr/local/transcg/README.txt`.
+Please note that the `transcg-container` repository itself does not include the `TransCG` application code. It only provides a Docker container setup for running the application. For more information about the `TransCG` application, refer to the [official `TransCG` repository](https://github.com/Domhoff859/TransCG).
 
-## About the Container
-
-This container is based on Ubuntu 18.04 and includes all the necessary dependencies for running TransCG. The container also includes a copy of the TransCG source code, which is installed in `/usr/local/transcg`.
-
-If you have any issues with the container, please feel free to open an issue in the repository.
-
-## Conclusion
-
-Thank you for using the TransCG Container! We hope this container makes it easy for you to use the TransCG tool in your projects. If you have any feedback or suggestions, please feel free to let us know. Happy coding!
+For any further questions or support, please open an issue in this repository. Enjoy using `transcg-container` for picture depth completion!
