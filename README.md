@@ -22,7 +22,7 @@ To get started with `transcg-container`, follow these steps:
 
 1. Clone this repository to your local machine:
    ```
-   git clone https://github.com/Domhoff859/transcg-container.git
+   git clone --recursive https://github.com/Domhoff859/transcg-container.git
    ```
 
 2. Change into the cloned directory:
