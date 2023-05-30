@@ -1,4 +1,3 @@
 [submodule "src/TransCG"]
 	path = src/TransCG
-	url = https://github.com/Galaxies99/TransCG.git
-	branch = 135f9e0
+	url = https://github.com/Domhoff859/TransCG.git
