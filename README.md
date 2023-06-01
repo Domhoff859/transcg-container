@@ -38,11 +38,11 @@ To get started with `transcg-container`, follow these steps:
 ## Usage
 Once you have built the Docker image, you can use it to perform picture depth completion with `TransCG` using the following command:
 
-```
-docker run -it transcg-container
+```bash
+docker run -v <path to dataset>:/workspace/src/TransCG/data -it transcg-container
 ```
 
-The above command runs the `TransCG` application inside a Docker container in interactive mode. This allows you to provide the necessary inputs and interact with the application.
+Replace `<path to dataset>` with the actual path to your dataset on the host machine. This command runs the `TransCG` application inside a Docker container in interactive mode and mounts the specified dataset directory to the `/workspace/src/TransCG/data` directory inside the container. This allows the application to access the dataset.
 
 Please note that the specific usage instructions for the `TransCG` application within the container may vary. Make sure to consult the documentation or README of the `TransCG` application for detailed usage instructions.
 
