@@ -1,5 +1,7 @@
+# Container base
 FROM  pytorch/pytorch:1.9.0-cuda11.1-cudnn8-runtime
 
+# linux dependencies
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 		build-essential \
 		libhdf5-100 \
@@ -14,9 +16,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 		nano \
 		vim
 
-# maybe we also have a requirements.txt file
+# python dependencies
 COPY ./requirements.txt /workspace/requirements.txt
-RUN pip install -r requirements.txt
+RUN pip --no-cache-dir install -r requirements.txt 
 COPY ./src /workspace/src
 
 WORKDIR /workspace/src/TransCG/
